@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fast Track Computer Institute | Godawari-10, Pyangaun, Lalitpur</title>
+
+<meta name="description"
+content="Fast Track Computer Institute, Godawari-10, Pyangaun, Lalitpur मा Computer Training, MS Office, Tally, Photoshop, Programming तथा अन्य Computer Courses।">
+
+<meta name="keywords"
+content="Fast Track Computer Institute, Computer Institute Lalitpur, Computer Training Chapagaun, Tally Course, MS Office Course">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS Word All Notes | Fast Track Computer Institute</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:#f3f6fb;
+    color:#222;
+    line-height:1.6;
+    transition:.3s;
+}
+
+body.dark{background:#121212;color:#eee}
+
+header{
+    background:linear-gradient(135deg,#063b91,#1976d2);
+    color:#fff;
+    text-align:center;
+    padding:28px 15px;
+}
+
+header h1{font-size:32px}
+header p{font-size:16px;margin:3px}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    background:#062e70;
+    box-shadow:0 3px 12px #0003;
+}
+
+nav button{
+    border:0;
+    background:transparent;
+    color:white;
+    padding:13px 15px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+nav button:hover{background:#1976d2}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.search-box{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 3px 12px #0001;
+}
+
+body.dark .search-box{background:#1f1f1f}
+
+.search-box input{
+    width:80%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:7px;
+    font-size:16px;
+}
+
+.search-box button,
+.action-btn{
+    border:0;
+    padding:12px 18px;
+    border-radius:7px;
+    background:#1261c9;
+    color:#fff;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.note-section{
+    display:none;
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    margin-bottom:25px;
+    box-shadow:0 3px 15px #0001;
+}
+
+.note-section.active{display:block}
+
+body.dark .note-section{
+    background:#1d1d1d;
+}
+
+h2{
+    color:#0b3d91;
+    border-bottom:3px solid #1261c9;
+    padding-bottom:8px;
+    margin-bottom:18px;
+}
+
+body.dark h2{color:#58a6ff}
+
+h3{
+    color:#1261c9;
+    margin:15px 0 7px;
+}
+
+body.dark h3{color:#58a6ff}
+
+.card-grid,
+.figure-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:18px;
+}
+
+.card{
+    background:#edf5ff;
+    padding:20px;
+    border-left:5px solid #1261c9;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px #0002;
+}
+
+body.dark .card{background:#292929}
+
+.info{
+    padding:15px;
+    margin:15px 0;
+    background:#e8f2ff;
+    border-left:5px solid #1261c9;
+    border-radius:7px;
+}
+
+body.dark .info{background:#292929}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:9px;
+}
+
+th{
+    background:#1261c9;
+    color:#fff;
+}
+
+body.dark td{border-color:#555}
+
+.language-toggle{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin:15px 0 25px;
+}
+
+.language-toggle button{
+    border:0;
+    padding:11px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    background:#e8edf5;
+    color:#0b3d91;
+}
+
+.language-toggle button.active{
+    background:#1261c9;
+    color:white;
+}
+
+body.dark .language-toggle button{
+    background:#292929;
+    color:#58a6ff;
+}
+
+body.dark .language-toggle button.active{
+    background:#174ea6;
+    color:#fff;
+}
+
+.lang-np{display:none}
+
+.qa-item{
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:15px;
+    margin:12px 0;
+    background:#fafcff;
+}
+
+body.dark .qa-item{
+    background:#252525;
+    border-color:#444;
+}
+
+.answer{
+    margin-top:8px;
+    padding:10px;
+    background:#eaf6ea;
+    border-left:4px solid #28a745;
+    border-radius:5px;
+}
+
+body.dark .answer{background:#19351f}
+
+.figure-card{
+    background:#f8fbff;
+    border:1px solid #d6e2f0;
+    border-radius:13px;
+    padding:18px;
+}
+
+body.dark .figure-card{
+    background:#252525;
+    border-color:#444;
+}
+
+.figure{
+    min-height:190px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    border-radius:10px;
+    margin:12px 0;
+    padding:10px;
+}
+
+body.dark .figure{background:#181818}
+
+/* SMARTART */
+
+.smart-list{width:90%}
+
+.smart-list div{
+    background:#1261c9;
+    color:#fff;
+    padding:11px;
+    margin:7px;
+    text-align:center;
+    border-radius:7px;
+}
+
+.process{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+.process span{
+    background:#1261c9;
+    color:white;
+    padding:10px;
+    border-radius:7px;
+    margin:3px;
+}
+
+.cycle{
+    width:170px;
+    height:170px;
+    border:5px dashed #1261c9;
+    border-radius:50%;
+    position:relative;
+}
+
+.cycle span{
+    position:absolute;
+    background:#1261c9;
+    color:#fff;
+    padding:6px 9px;
+    border-radius:6px;
+    font-size:12px;
+}
+
+.cycle .a{top:-5px;left:55px}
+.cycle .b{right:-15px;top:65px}
+.cycle .c{bottom:-5px;left:55px}
+.cycle .d{left:-20px;top:65px}
+
+.hierarchy{text-align:center}
+
+.hierarchy div{margin:8px}
+
+.hierarchy span{
+    display:inline-block;
+    background:#1261c9;
+    color:#fff;
+    padding:9px 15px;
+    margin:3px;
+    border-radius:7px;
+}
+
+.matrix{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:5px;
+    width:200px;
+}
+
+.matrix div{
+    padding:30px 10px;
+    background:#1261c9;
+    color:#fff;
+    text-align:center;
+}
+
+.pyramid{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.pyramid div{
+    color:#fff;
+    padding:8px;
+    text-align:center;
+}
+
+.p1{width:70px;background:#1261c9}
+.p2{width:120px;background:#185aa4}
+.p3{width:170px;background:#2478bd}
+.p4{width:220px;background:#3290d0}
+
+/* CHARTS */
+
+.bar-chart{
+    width:90%;
+    height:160px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-around;
+    border-left:2px solid #333;
+    border-bottom:2px solid #333;
+}
+
+.bar{
+    width:35px;
+    background:#1261c9;
+    position:relative;
+}
+
+.bar small{
+    position:absolute;
+    bottom:-24px;
+    width:70px;
+    left:-17px;
+    text-align:center;
+}
+
+.b1{height:70px}
+.b2{height:105px}
+.b3{height:90px}
+.b4{height:135px}
+
+.horizontal-chart{width:90%}
+
+.hbar{
+    background:#1261c9;
+    color:#fff;
+    height:27px;
+    margin:9px 0;
+    padding-left:8px;
+    border-radius:5px;
+}
+
+.pie{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:conic-gradient(
+        #1261c9 0 120deg,
+        #54a0d8 120deg 220deg,
+        #83c341 220deg 290deg,
+        #ffad18 290deg 360deg
+    );
+}
+
+.doughnut{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:conic-gradient(
+        #1261c9 0 140deg,
+        #54a0d8 140deg 230deg,
+        #83c341 230deg 360deg
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.doughnut:after{
+    content:"";
+    width:80px;
+    height:80px;
+    background:white;
+    border-radius:50%;
+}
+
+body.dark .doughnut:after{background:#181818}
+
+.chart-svg{
+    width:100%;
+    height:180px;
+}
+
+.chart-svg polyline{
+    fill:none;
+    stroke:#1261c9;
+    stroke-width:4;
+}
+
+.chart-svg polygon{
+    fill:#b9d8f7;
+    stroke:#1261c9;
+    stroke-width:3;
+}
+
+.chart-svg circle{
+    fill:#1261c9;
+}
+
+/* MCQ */
+
+.mcq{
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:18px;
+    margin:15px 0;
+    background:#fbfdff;
+}
+
+body.dark .mcq{
+    background:#252525;
+    border-color:#444;
+}
+
+.option{
+    display:block;
+    width:100%;
+    text-align:left;
+    border:1px solid #ccd5e0;
+    background:#fff;
+    padding:11px;
+    margin:7px 0;
+    border-radius:7px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+body.dark .option{
+    background:#303030;
+    color:white;
+    border-color:#555;
+}
+
+.option:hover{
+    background:#eaf3ff;
+}
+
+.option.correct{
+    background:#d4edda !important;
+    border-color:#28a745 !important;
+    color:#155724 !important;
+}
+
+.option.wrong{
+    background:#f8d7da !important;
+    border-color:#dc3545 !important;
+    color:#721c24 !important;
+}
+
+.result{
+    margin-top:10px;
+    padding:10px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.result.correct{
+    background:#d4edda;
+    color:#155724;
+}
+
+.result.wrong{
+    background:#f8d7da;
+    color:#721c24;
+}
+
+.score-box{
+    position:sticky;
+    top:55px;
+    z-index:20;
+    background:#1261c9;
+    color:white;
+    padding:14px;
+    border-radius:9px;
+    margin-bottom:15px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+}
+
+footer{
+    background:#062e70;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:700px){
+
+    header h1{font-size:24px}
+
+    nav button{
+        padding:9px 8px;
+        font-size:11px;
+    }
+
+    .container{padding:10px}
+
+    .note-section{padding:15px}
+
+    .search-box input{
+        width:100%;
+        margin-bottom:7px;
+    }
+
+    .search-box button{width:100%}
+
+    table{
+        font-size:13px;
+    }
+
+    .process{
+        flex-direction:column;
+    }
+}
+
+@media print{
+
+    nav,
+    .search-box,
+    .language-toggle,
+    .action-btn,
+    .score-box{
+        display:none !important;
+    }
+
+    .note-section{
+        display:block !important;
+        box-shadow:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📘 MS Word All Notes Collection</h1>
+<p><b>Fast Track Computer Institute</b></p>
+<p>Godawari-10, Pyangaun, Lalitpur</p>
+</header>
+
+<nav>
+<button onclick="showSection('home')">🏠 Home</button>
+<button onclick="showSection('intro')">📚 Introduction</button>
+<button onclick="showSection('tabs')">🧰 Tabs & Tools</button>
+<button onclick="showSection('shortcuts')">⌨️ Shortcuts</button>
+<button onclick="showSection('smartchart')">📊 SmartArt & Charts</button>
+<button onclick="showSection('practical')">📝 Practical</button>
+<button onclick="showSection('viva')">🎓 Viva Q&A</button>
+<button onclick="showSection('mcq')">🎯 50 MCQ</button>
+<button onclick="darkMode()">🌙 Dark</button>
+</nav>
+
+<div class="container">
+
+<div class="search-box">
+<input id="searchInput"
+placeholder="🔍 Search MS Word Notes..."
+onkeyup="searchNotes()">
+<button onclick="clearSearch()">Clear</button>
+</div>
+
+<!-- HOME -->
+
+<section id="home" class="note-section active">
+
+<h2>🏠 MS Word All Notes Collection</h2>
+
+<div class="card-grid">
+
+<div class="card" onclick="showSection('intro')">
+<h3>📚 Introduction</h3>
+<p>MS Word basics, definition and important parts.</p>
+</div>
+
+<div class="card" onclick="showSection('tabs')">
+<h3>🧰 Tabs & Tools</h3>
+<p>Home, Insert, Design, Layout, References, Mailings, Review and View.</p>
+</div>
+
+<div class="card" onclick="showSection('shortcuts')">
+<h3>⌨️ Shortcut Keys</h3>
+<p>Important MS Word shortcut keys.</p>
+</div>
+
+<div class="card" onclick="showSection('smartchart')">
+<h3>📊 SmartArt & Charts</h3>
+<p>SmartArt and Chart types with visual figures.</p>
+</div>
+
+<div class="card" onclick="showSection('practical')">
+<h3>📝 Practical</h3>
+<p>Basic to advanced MS Word practical questions.</p>
+</div>
+
+<div class="card" onclick="showSection('viva')">
+<h3>🎓 Viva Q&A</h3>
+<p>160 Questions and Answers in English and Nepali.</p>
+</div>
+
+<div class="card" onclick="showSection('mcq')">
+<h3>🎯 50 MCQ Questions</h3>
+<p>Interactive multiple choice questions with instant result.</p>
+</div>
+
+</div>
+
+<div class="info">
+<b>Note:</b> This webpage is designed for MS Word students of
+Fast Track Computer Institute.
+</div>
+
+</section>
+
+<!-- INTRO -->
+
+<section id="intro" class="note-section">
+
+<h2>📚 MS Word Introduction</h2>
+
+<h3>What is MS Word?</h3>
+<p>
+MS Word is a word processing software developed by Microsoft.
+It is used to create, edit, format, save and print documents.
+</p>
+
+<h3>Uses of MS Word</h3>
+
+<ul>
+<li>Letters</li>
+<li>Reports</li>
+<li>CV and Resume</li>
+<li>Notices</li>
+<li>Certificates</li>
+<li>Assignments</li>
+<li>Tables</li>
+<li>Mail Merge</li>
+<li>Pictures and Shapes</li>
+<li>Professional Documents</li>
+</ul>
+
+<h3>Important Parts of MS Word</h3>
+
+<table>
+<tr><th>Part</th><th>Function</th></tr>
+<tr><td>Title Bar</td><td>Displays document name.</td></tr>
+<tr><td>Quick Access Toolbar</td><td>Provides quick access to common commands.</td></tr>
+<tr><td>Ribbon</td><td>Contains tabs, groups and commands.</td></tr>
+<tr><td>Document Area</td><td>Area where we type and edit.</td></tr>
+<tr><td>Ruler</td><td>Used for margins, indents and tabs.</td></tr>
+<tr><td>Status Bar</td><td>Displays page and word information.</td></tr>
+<tr><td>Scroll Bar</td><td>Moves through the document.</td></tr>
+</table>
+
+</section>
+
+<!-- TABS -->
+
+<section id="tabs" class="note-section">
+
+<h2>🧰 MS Word Tabs & Tools</h2>
+
+<h3>🏠 Home Tab</h3>
+<p>Clipboard, Font, Paragraph, Styles and Editing.</p>
+
+<h3>📥 Insert Tab</h3>
+<p>Pages, Tables, Pictures, Shapes, SmartArt, Charts, Hyperlinks, Header, Footer and Symbols.</p>
+
+<h3>🎨 Design Tab</h3>
+<p>Themes, Colors, Fonts, Watermark, Page Color and Page Borders.</p>
+
+<h3>📐 Layout Tab</h3>
+<p>Margins, Orientation, Size, Columns, Breaks, Indent and Spacing.</p>
+
+<h3>📖 References Tab</h3>
+<p>Table of Contents, Footnotes, Citations, Bibliography, Captions and Index.</p>
+
+<h3>✉️ Mailings Tab</h3>
+<p>Mail Merge, Envelopes and Labels.</p>
+
+<h3>🔍 Review Tab</h3>
+<p>Spelling & Grammar, Comments, Track Changes and Protect Document.</p>
+
+<h3>👁️ View Tab</h3>
+<p>Read Mode, Print Layout, Web Layout, Navigation Pane and Zoom.</p>
+
+</section>
+
+<!-- SMARTART -->
+
+<section id="smartchart" class="note-section">
+
+<h2>📊 SmartArt & Charts</h2>
+
+<div class="language-toggle">
+<button id="enSmart" class="active" onclick="changeLanguage('en')">🇬🇧 English</button>
+<button id="npSmart" onclick="changeLanguage('np')">🇳🇵 नेपाली</button>
+</div>
+
+<h2>🧩 SmartArt</h2>
+
+<p class="lang-en">
+SmartArt is used to present information visually through diagrams.
+</p>
+
+<p class="lang-np">
+SmartArt भनेको जानकारीलाई विभिन्न Diagram तथा Graphic को माध्यमबाट दृश्यात्मक रूपमा प्रस्तुत गर्ने सुविधा हो।
+</p>
+
+<div class="figure-grid">
+
+<div class="figure-card">
+<h3>1. List SmartArt</h3>
+
+<div class="figure">
+<div class="smart-list">
+<div>Point 1</div>
+<div>Point 2</div>
+<div>Point 3</div>
+</div>
+</div>
+
+<p class="lang-en">
+<b>Use:</b> Displays related information as a list.
+<br><b>Path:</b> Insert → SmartArt → List
+</p>
+
+<p class="lang-np">
+<b>प्रयोग:</b> सम्बन्धित जानकारीलाई List को रूपमा देखाउन प्रयोग गरिन्छ।
+<br><b>Path:</b> Insert → SmartArt → List
+</p>
+</div>
+
+<div class="figure-card">
+<h3>2. Process SmartArt</h3>
+
+<div class="figure">
+<div class="process">
+<span>Planning</span> →
+<span>Designing</span> →
+<span>Development</span> →
+<span>Testing</span>
+</div>
+</div>
+
+<p class="lang-en">
+Used to show step-by-step processes.
+</p>
+
+<p class="lang-np">
+कुनै कामका क्रमिक चरणहरू देखाउन प्रयोग गरिन्छ।
+</p>
+</div>
+
+<div class="figure-card">
+<h3>3. Cycle SmartArt</h3>
+
+<div class="figure">
+<div class="cycle">
+<span class="a">Plan</span>
+<span class="b">Do</span>
+<span class="c">Check</span>
+<span class="d">Act</span>
+</div>
+</div>
+
+<p class="lang-en">Used for repeating processes.</p>
+<p class="lang-np">दोहोरिरहने Process देखाउन प्रयोग गरिन्छ।</p>
+</div>
+
+<div class="figure-card">
+<h3>4. Hierarchy SmartArt</h3>
+
+<div class="figure">
+<div class="hierarchy">
+<div><span>Principal</span></div>
+<div><span>Teacher</span><span>Staff</span></div>
+<div><span>Students</span></div>
+</div>
+</div>
+
+<p class="lang-en">Used for organization charts and hierarchy.</p>
+<p class="lang-np">Organization Chart तथा Hierarchy देखाउन प्रयोग गरिन्छ।</p>
+</div>
+
+<div class="figure-card">
+<h3>5. Relationship SmartArt</h3>
+
+<div class="figure">
+<div style="display:flex">
+<div style="width:85px;height:85px;border-radius:50%;background:#1261c9;color:white;display:flex;align-items:center;justify-content:center">A</div>
+<div style="width:85px;height:85px;border-radius:50%;background:#54a0d8;color:white;display:flex;align-items:center;justify-content:center;margin-left:-20px">B</div>
+<div style="width:85px;height:85px;border-radius:50%;background:#83c341;color:white;display:flex;align-items:center;justify-content:center;margin-left:-20px">C</div>
+</div>
+</div>
+
+<p class="lang-en">Shows relationships between elements.</p>
+<p class="lang-np">विभिन्न Elements बीचको सम्बन्ध देखाउँछ।</p>
+</div>
+
+<div class="figure-card">
+<h3>6. Matrix SmartArt</h3>
+
+<div class="figure">
+<div class="matrix">
+<div>A</div><div>B</div>
+<div>C</div><div>D</div>
+</div>
+</div>
+
+<p class="lang-en">Shows information in matrix structure.</p>
+<p class="lang-np">Information लाई Matrix Structure मा देखाउँछ।</p>
+</div>
+
+<div class="figure-card">
+<h3>7. Pyramid SmartArt</h3>
+
+<div class="figure">
+<div class="pyramid">
+<div class="p1">Top</div>
+<div class="p2">Level 2</div>
+<div class="p3">Level 3</div>
+<div class="p4">Base</div>
+</div>
+</div>
+
+<p class="lang-en">Shows levels and hierarchy.</p>
+<p class="lang-np">विभिन्न तह तथा Hierarchy देखाउन प्रयोग गरिन्छ।</p>
+</div>
+
+</div>
+
+<h2>📈 Chart Types</h2>
+
+<div class="figure-grid">
+
+<div class="figure-card">
+<h3>1. Column Chart</h3>
+
+<div class="figure">
+<div class="bar-chart">
+<div class="bar b1"><small>English</small></div>
+<div class="bar b2"><small>Math</small></div>
+<div class="bar b3"><small>Science</small></div>
+<div class="bar b4"><small>Computer</small></div>
+</div>
+</div>
+
+<p class="lang-en">Used to compare values between categories.</p>
+<p class="lang-np">विभिन्न Category का Values तुलना गर्न प्रयोग गरिन्छ।</p>
+</div>
+
+<div class="figure-card">
+<h3>2. Bar Chart</h3>
+
+<div class="figure">
+<div class="horizontal-chart">
+<div class="hbar" style="width:90%">Computer</div>
+<div class="hbar" style="width:75%">Math</div>
+<div class="hbar" style="width:65%">English</div>
+<div class="hbar" style="width:55%">Science</div>
+</div>
+</div>
+
+<p class="lang-en">Compares values horizontally.</p>
+<p class="lang-np">Values लाई Horizontal रूपमा तुलना गर्छ।</p>
+</div>
+
+<div class="figure-card">
+<h3>3. Line Chart</h3>
+
+<div class="figure">
+<svg class="chart-svg" viewBox="0 0 400 180">
+<polyline points="20,140 90,110 160,125 230,70 300,90 370,35"/>
+<circle cx="20" cy="140" r="5"/>
+<circle cx="90" cy="110" r="5"/>
+<circle cx="160" cy="125" r="5"/>
+<circle cx="230" cy="70" r="5"/>
+<circle cx="300" cy="90" r="5"/>
+<circle cx="370" cy="35" r="5"/>
+</svg>
+</div>
+
+<p class="lang-en">Shows trends over time.</p>
+<p class="lang-np">समयसँगै भएको Trend देखाउँछ।</p>
+</div>
+
+<div class="figure-card">
+<h3>4. Pie Chart</h3>
+
+<div class="figure">
+<div class="pie"></div>
+</div>
+
+<p class="lang-en">Shows percentage or parts of a whole.</p>
+<p class="lang-np">कुल Data को Percentage वा भाग देखाउँछ।</p>
+</div>
+
+<div class="figure-card">
+<h3>5. Doughnut Chart</h3>
+
+<div class="figure">
+<div class="doughnut"></div>
+</div>
+
+<p class="lang-en">Similar to Pie Chart with a center hole.</p>
+<p class="lang-np">Pie Chart जस्तै हुन्छ तर बीचमा खाली भाग हुन्छ।</p>
+</div>
+
+<div class="figure-card">
+<h3>6. Area Chart</h3>
+
+<div class="figure">
+<svg class="chart-svg" viewBox="0 0 400 180">
+<polygon points="20,140 80,110 140,125 210,70 280,90 370,35 370,160 20,160"/>
+</svg>
+</div>
+
+<p class="lang-en">Shows trend and magnitude.</p>
+<p class="lang-np">Trend र Magnitude देखाउन प्रयोग गरिन्छ।</p>
+</div>
+
+<div class="figure-card">
+<h3>7. Scatter Chart</h3>
+
+<div class="figure">
+<svg class="chart-svg" viewBox="0 0 400 180">
+<circle cx="50" cy="130" r="7"/>
+<circle cx="90" cy="110" r="7"/>
+<circle cx="130" cy="125" r="7"/>
+<circle cx="175" cy="80" r="7"/>
+<circle cx="220" cy="90" r="7"/>
+<circle cx="270" cy="55" r="7"/>
+<circle cx="320" cy="70" r="7"/>
+</svg>
+</div>
+
+<p class="lang-en">Shows relationships between numerical variables.</p>
+<p class="lang-np">Numerical Variables बीचको सम्बन्ध देखाउँछ।</p>
+</div>
+
+<div class="figure-card">
+<h3>8. Radar Chart</h3>
+
+<div class="figure">
+<svg class="chart-svg" viewBox="0 0 300 200">
+<polygon points="150,20 230,70 200,160 100,160 70,70"
+fill="none" stroke="#888" stroke-width="2"/>
+<polygon points="150,45 205,80 185,135 110,125 90,80"
+fill="#b9d8f7" stroke="#1261c9" stroke-width="3"/>
+</svg>
+</div>
+
+<p class="lang-en">Compares multiple variables.</p>
+<p class="lang-np">धेरै Variables लाई तुलना गर्छ।</p>
+</div>
+
+</div>
+
+<div class="info">
+<b>Insert SmartArt:</b> Insert → SmartArt → Select Category → Select Design → Enter Text
+<br><br>
+<b>Insert Chart:</b> Insert → Chart → Select Chart Type → Enter Data
+</div>
+
+</section>
+
+<!-- SHORTCUTS -->
+
+<section id="shortcuts" class="note-section">
+
+<h2>⌨️ MS Word Shortcut Keys</h2>
+
+<table>
+<tr><th>Shortcut</th><th>Function</th></tr>
+<tr><td>Ctrl + N</td><td>New Document</td></tr>
+<tr><td>Ctrl + O</td><td>Open Document</td></tr>
+<tr><td>Ctrl + S</td><td>Save</td></tr>
+<tr><td>F12</td><td>Save As</td></tr>
+<tr><td>Ctrl + P</td><td>Print</td></tr>
+<tr><td>Ctrl + W</td><td>Close Document</td></tr>
+<tr><td>Ctrl + Z</td><td>Undo</td></tr>
+<tr><td>Ctrl + Y</td><td>Redo</td></tr>
+<tr><td>Ctrl + X</td><td>Cut</td></tr>
+<tr><td>Ctrl + C</td><td>Copy</td></tr>
+<tr><td>Ctrl + V</td><td>Paste</td></tr>
+<tr><td>Ctrl + A</td><td>Select All</td></tr>
+<tr><td>Ctrl + F</td><td>Find</td></tr>
+<tr><td>Ctrl + H</td><td>Replace</td></tr>
+<tr><td>Ctrl + G</td><td>Go To</td></tr>
+<tr><td>Ctrl + B</td><td>Bold</td></tr>
+<tr><td>Ctrl + I</td><td>Italic</td></tr>
+<tr><td>Ctrl + U</td><td>Underline</td></tr>
+<tr><td>Ctrl + E</td><td>Center Align</td></tr>
+<tr><td>Ctrl + L</td><td>Left Align</td></tr>
+<tr><td>Ctrl + R</td><td>Right Align</td></tr>
+<tr><td>Ctrl + J</td><td>Justify</td></tr>
+<tr><td>Ctrl + K</td><td>Hyperlink</td></tr>
+<tr><td>Ctrl + Enter</td><td>Page Break</td></tr>
+<tr><td>Ctrl + Shift + &gt;</td><td>Increase Font Size</td></tr>
+<tr><td>Ctrl + Shift + &lt;</td><td>Decrease Font Size</td></tr>
+<tr><td>Ctrl + Shift + C</td><td>Copy Formatting</td></tr>
+<tr><td>Ctrl + Shift + V</td><td>Paste Formatting</td></tr>
+<tr><td>Ctrl + Shift + E</td><td>Track Changes</td></tr>
+<tr><td>Ctrl + Alt + M</td><td>Insert Comment</td></tr>
+<tr><td>Ctrl + Alt + F</td><td>Insert Footnote</td></tr>
+<tr><td>Ctrl + Alt + D</td><td>Insert Endnote</td></tr>
+<tr><td>Ctrl + T</td><td>Hanging Indent</td></tr>
+<tr><td>Ctrl + Shift + T</td><td>Reduce Hanging Indent</td></tr>
+<tr><td>Ctrl + 0</td><td>Space Before Paragraph</td></tr>
+<tr><td>Ctrl + 1</td><td>Single Spacing</td></tr>
+<tr><td>Ctrl + 2</td><td>Double Spacing</td></tr>
+<tr><td>Ctrl + 5</td><td>1.5 Spacing</td></tr>
+<tr><td>Ctrl + Shift + L</td><td>Bullets</td></tr>
+<tr><td>Ctrl + =</td><td>Subscript</td></tr>
+<tr><td>Ctrl + Shift + =</td><td>Superscript</td></tr>
+<tr><td>F1</td><td>Help</td></tr>
+<tr><td>F4</td><td>Repeat Last Action</td></tr>
+<tr><td>F5</td><td>Go To</td></tr>
+<tr><td>F7</td><td>Spelling & Grammar</td></tr>
+<tr><td>F9</td><td>Update Field</td></tr>
+<tr><td>Shift + F3</td><td>Change Case</td></tr>
+<tr><td>Alt + Q</td><td>Search</td></tr>
+</table>
+
+</section>
+
+<!-- PRACTICAL -->
+
+<section id="practical" class="note-section">
+
+<h2>📝 MS Word Practical Questions</h2>
+
+<h3>Basic Level</h3>
+
+<ol>
+<li>Create a new document.</li>
+<li>Type and format a paragraph.</li>
+<li>Change font name and size.</li>
+<li>Apply Bold, Italic and Underline.</li>
+<li>Change text color.</li>
+<li>Apply paragraph alignment.</li>
+<li>Create bullets and numbering.</li>
+<li>Set page margins.</li>
+<li>Change page orientation.</li>
+<li>Insert page number.</li>
+</ol>
+
+<h3>Intermediate Level</h3>
+
+<ol>
+<li>Create a professional CV.</li>
+<li>Create a school notice.</li>
+<li>Create a certificate.</li>
+<li>Create and format a table.</li>
+<li>Merge and split cells.</li>
+<li>Insert a picture.</li>
+<li>Insert WordArt.</li>
+<li>Insert Shapes.</li>
+<li>Insert SmartArt.</li>
+<li>Insert Chart.</li>
+<li>Create Header and Footer.</li>
+<li>Insert Watermark.</li>
+<li>Use Find and Replace.</li>
+<li>Create Table of Contents.</li>
+<li>Insert Footnote.</li>
+</ol>
+
+<h3>Advanced Level</h3>
+
+<ol>
+<li>Create a Mail Merge document.</li>
+<li>Create Labels.</li>
+<li>Create Envelopes.</li>
+<li>Use Track Changes.</li>
+<li>Insert Comments.</li>
+<li>Protect a document.</li>
+<li>Create a professional report.</li>
+<li>Create an organization chart using SmartArt.</li>
+<li>Create a student marks chart.</li>
+<li>Create a multi-section document.</li>
+</ol>
+
+<button class="action-btn" onclick="window.print()">🖨️ Print</button>
+
+</section>
+
+<!-- VIVA -->
+
+<section id="viva" class="note-section">
+
+<h2>🎓 MS Word Viva Questions & Answers</h2>
+
+<div class="language-toggle">
+<button id="enViva" class="active" onclick="changeLanguage('en')">🇬🇧 English</button>
+<button id="npViva" onclick="changeLanguage('np')">🇳🇵 नेपाली</button>
+</div>
+
+<div id="qaContainer"></div>
+
+</section>
+
+<!-- MCQ -->
+
+<section id="mcq" class="note-section">
+
+<h2>🎯 MS Word – 50 MCQ Questions</h2>
+
+<div class="language-toggle">
+<button id="enMCQ" class="active" onclick="changeMCQLanguage('en')">
+🇬🇧 English
+</button>
+<button id="npMCQ" onclick="changeMCQLanguage('np')">
+🇳🇵 नेपाली
+</button>
+</div>
+
+<div class="score-box">
+Score: <span id="score">0</span> / 50
+&nbsp;&nbsp; | &nbsp;&nbsp;
+Attempted: <span id="attempted">0</span> / 50
+</div>
+
+<div id="mcqContainer"></div>
+
+<button class="action-btn" onclick="resetQuiz()">
+🔄 Reset Quiz
+</button>
+
+</section>
+
+</div>
+
+<footer>
+<p><b>Fast Track Computer Institute</b></p>
+<p>Godawari-10, Pyangaun, Lalitpur</p>
+<p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script>
+
+/* ==========================
+SECTION
+========================== */
+
+function showSection(id){
+
+document.querySelectorAll(".note-section")
+.forEach(x=>x.classList.remove("active"));
+
+const section=document.getElementById(id);
+
+if(section){
+
+section.classList.add("active");
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+}
+
+/* ==========================
+DARK MODE
+========================== */
+
+function darkMode(){
+
+document.body.classList.toggle("dark");
+
+localStorage.setItem(
+"mswordDark",
+document.body.classList.contains("dark")
+);
+
+}
+
+/* ==========================
+LANGUAGE
+========================== */
+
+function changeLanguage(lang){
+
+document.querySelectorAll(".lang-en")
+.forEach(x=>{
+x.style.display=lang==="en"?"block":"none";
+});
+
+document.querySelectorAll(".lang-np")
+.forEach(x=>{
+x.style.display=lang==="np"?"block":"none";
+});
+
+document.querySelectorAll("#enSmart,#enViva")
+.forEach(x=>{
+x.classList.toggle("active",lang==="en");
+});
+
+document.querySelectorAll("#npSmart,#npViva")
+.forEach(x=>{
+x.classList.toggle("active",lang==="np");
+});
+
+localStorage.setItem("mswordLanguage",lang);
+
+}
+
+/* ==========================
+SEARCH
+========================== */
+
+function searchNotes(){
+
+let value=
+document.getElementById("searchInput")
+.value
+.toLowerCase()
+.trim();
+
+let sections=
+document.querySelectorAll(".note-section");
+
+if(value===""){
+
+sections.forEach(x=>x.classList.remove("active"));
+
+document.getElementById("home")
+.classList.add("active");
+
+return;
+
+}
+
+let found=false;
+
+sections.forEach(section=>{
+
+if(section.textContent.toLowerCase().includes(value)){
+
+section.classList.add("active");
+found=true;
+
+}else{
+
+section.classList.remove("active");
+
+}
+
+});
+
+if(!found)
+document.getElementById("home").classList.add("active");
+
+}
+
+/* ==========================
+CLEAR SEARCH
+========================== */
+
+function clearSearch(){
+
+document.getElementById("searchInput").value="";
+
+document.querySelectorAll(".note-section")
+.forEach(x=>x.classList.remove("active"));
+
+document.getElementById("home")
+.classList.add("active");
+
+}
+
+/* ==========================
+VIVA DATA
+Question + English Answer
++ Nepali Question + Nepali Answer
+========================== */
+
+const qaData=[
+
+["What is MS Word?","MS Word is a word processing software developed by Microsoft.","MS Word भनेको के हो?","MS Word भनेको Microsoft द्वारा विकसित गरिएको Word Processing Software हो।"],
+
+["What is a document?","A document is a file created in a word processing program.","Document भनेको के हो?","Document भनेको Word Processing Program मा तयार गरिएको File हो।"],
+
+["What is the extension of a modern Word document?","The default extension is .docx.","Modern Word Document को Extension के हो?","Modern Word Document को Default Extension .docx हो।"],
+
+["What is word processing?","Word processing means creating, editing and formatting documents.","Word Processing भनेको के हो?","Word Processing भनेको Document तयार, Edit र Format गर्ने प्रक्रिया हो।"],
+
+["What is the Ribbon?","The Ribbon contains tabs, groups and commands.","Ribbon भनेको के हो?","Ribbon मा Tabs, Groups र Commands हुन्छन्।"],
+
+["What is a Tab?","A Tab contains related groups of commands.","Tab भनेको के हो?","Tab मा सम्बन्धित Commands का Groups हुन्छन्।"],
+
+["What is the Home Tab?","It contains Clipboard, Font, Paragraph, Styles and Editing groups.","Home Tab मा के-के हुन्छ?","Home Tab मा Clipboard, Font, Paragraph, Styles र Editing Groups हुन्छन्।"],
+
+["What is the Insert Tab?","It is used to insert tables, pictures, shapes, SmartArt and charts.","Insert Tab केका लागि प्रयोग हुन्छ?","Insert Tab बाट Table, Picture, Shape, SmartArt र Chart आदि Insert गर्न सकिन्छ।"],
+
+["What is WordArt?","WordArt is used to create decorative text.","WordArt भनेको के हो?","WordArt सजावटी Text तयार गर्न प्रयोग गरिन्छ।"],
+
+["What is a Header?","A Header is information displayed at the top of a page.","Header भनेको के हो?","Header भनेको Page को माथिल्लो भागमा देखिने Information हो।"],
+
+["What is a Footer?","A Footer is information displayed at the bottom of a page.","Footer भनेको के हो?","Footer भनेको Page को तल्लो भागमा देखिने Information हो।"],
+
+["What is Page Orientation?","It determines Portrait or Landscape layout.","Page Orientation भनेको के हो?","यसले Portrait वा Landscape Layout निर्धारण गर्छ।"],
+
+["What is a watermark?","A watermark is light text or an image displayed behind document content.","Watermark भनेको के हो?","Watermark भनेको Document Content पछाडि देखिने हल्का Text वा Image हो।"],
+
+["What is Mail Merge?","Mail Merge creates multiple personalized documents using a common template and data source.","Mail Merge भनेको के हो?","Mail Merge ले एउटै Template र Data Source प्रयोग गरेर धेरै Personalized Documents बनाउन मद्दत गर्छ।"],
+
+["What is a table?","A table organizes information into rows and columns.","Table भनेको के हो?","Table ले Information लाई Rows र Columns मा व्यवस्थित गर्छ।"],
+
+["What is a cell?","A cell is the intersection of a row and column.","Cell भनेको के हो?","Cell भनेको Row र Column भेटिएको स्थान हो।"],
+
+["What is a row?","A row is a horizontal group of cells.","Row भनेको के हो?","Row भनेको Horizontal रूपमा रहेका Cells को समूह हो।"],
+
+["What is a column?","A column is a vertical group of cells.","Column भनेको के हो?","Column भनेको Vertical रूपमा रहेका Cells को समूह हो।"],
+
+["What is a margin?","Margin is the blank space around page content.","Margin भनेको के हो?","Margin भनेको Page Content वरिपरि रहने खाली ठाउँ हो।"],
+
+["What is a page break?","A page break starts content on a new page.","Page Break भनेको के हो?","Page Break ले Content लाई नयाँ Page बाट सुरु गर्छ।"],
+
+["What is Find?","Find searches for specific text in a document.","Find भनेको के हो?","Find ले Document भित्रको निश्चित Text खोज्छ।"],
+
+["What is Replace?","Replace changes one text or phrase to another.","Replace भनेको के हो?","Replace ले एउटा Text वा Phrase लाई अर्को Text ले परिवर्तन गर्छ।"],
+
+["What is Spelling and Grammar?","It checks spelling and grammatical errors.","Spelling and Grammar भनेको के हो?","यसले Spelling र Grammar का त्रुटिहरू जाँच गर्छ।"],
+
+["What is Track Changes?","Track Changes records changes made to a document.","Track Changes भनेको के हो?","Track Changes ले Document मा भएका परिवर्तनहरू Record गर्छ।"],
+
+["What is a comment?","A comment is a note added to document content.","Comment भनेको के हो?","Comment भनेको Document Content मा थपिएको Note हो।"],
+
+["What is a hyperlink?","A hyperlink connects text or an object to another location.","Hyperlink भनेको के हो?","Hyperlink ले Text वा Object लाई अर्को Location सँग जोड्छ।"],
+
+["What is SmartArt?","SmartArt presents information using visual diagrams.","SmartArt भनेको के हो?","SmartArt ले Information लाई Visual Diagram को रूपमा प्रस्तुत गर्छ।"],
+
+["What is a Chart?","A Chart represents numerical data graphically.","Chart भनेको के हो?","Chart ले Numerical Data लाई Graphical रूपमा प्रस्तुत गर्छ।"],
+
+["What is a Column Chart?","It compares values using vertical columns.","Column Chart भनेको के हो?","यसले Vertical Columns प्रयोग गरेर Values तुलना गर्छ।"],
+
+["What is a Bar Chart?","It compares values using horizontal bars.","Bar Chart भनेको के हो?","यसले Horizontal Bars प्रयोग गरेर Values तुलना गर्छ।"],
+
+["What is a Line Chart?","It shows trends over time.","Line Chart भनेको के हो?","यसले समयसँगै भएको Trend देखाउँछ।"],
+
+["What is a Pie Chart?","It shows parts or percentages of a whole.","Pie Chart भनेको के हो?","यसले कुल Data को विभिन्न भाग वा Percentage देखाउँछ।"],
+
+["What is a Doughnut Chart?","It is similar to a Pie Chart with a center hole.","Doughnut Chart भनेको के हो?","यो Pie Chart जस्तै हुन्छ तर बीचमा खाली भाग हुन्छ।"],
+
+["What is an Area Chart?","It shows trends and magnitude over time.","Area Chart भनेको के हो?","यसले समयसँगैको Trend र Magnitude देखाउँछ।"],
+
+["What is a Scatter Chart?","It shows relationships between numerical variables.","Scatter Chart भनेको के हो?","यसले Numerical Variables बीचको सम्बन्ध देखाउँछ।"],
+
+["What is a Radar Chart?","It compares multiple variables around a central point.","Radar Chart भनेको के हो?","यसले धेरै Variables लाई तुलना गर्छ।"],
+
+["What is a Combo Chart?","It combines two or more chart types.","Combo Chart भनेको के हो?","Combo Chart ले दुई वा बढी Chart Types लाई जोड्छ।"],
+
+["What is a Theme?","A Theme is a coordinated set of fonts, colors and effects.","Theme भनेको के हो?","Theme भनेको मिलाइएको Fonts, Colors र Effects को समूह हो।"],
+
+["What is Page Color?","It changes the background color of a page.","Page Color भनेको के हो?","यसले Page को Background Color परिवर्तन गर्छ।"],
+
+["What is Page Border?","It adds a border around a page.","Page Border भनेको के हो?","यसले Page वरिपरि Border राख्छ।"],
+
+["What is a Style?","A Style is a predefined set of formatting options.","Style भनेको के हो?","Style भनेको पहिले नै तयार गरिएको Formatting Options को समूह हो।"],
+
+["What is a font?","A font is the design or typeface of text.","Font भनेको के हो?","Font भनेको Text को अक्षरको Design वा Typeface हो।"],
+
+["What is Bold?","Bold makes text darker and thicker.","Bold भनेको के हो?","Bold ले Text लाई बाक्लो बनाउँछ।"],
+
+["What is Italic?","Italic slants text.","Italic भनेको के हो?","Italic ले Text लाई ढल्काउँछ।"],
+
+["What is Underline?","Underline places a line below text.","Underline भनेको के हो?","Underline ले Text को तल Line राख्छ।"],
+
+["What is alignment?","Alignment controls the position of text in a paragraph.","Alignment भनेको के हो?","Alignment ले Paragraph भित्र Text को Position मिलाउँछ।"],
+
+["What is Justify?","Justify aligns text evenly between both margins.","Justify भनेको के हो?","Justify ले Text लाई दुवै Margin मा बराबर मिलाउँछ।"],
+
+["What is line spacing?","Line spacing controls the vertical space between lines.","Line Spacing भनेको के हो?","Line Spacing ले Lines बीचको Vertical Space नियन्त्रण गर्छ।"],
+
+["What is indentation?","Indentation changes paragraph position from the margin.","Indentation भनेको के हो?","Indentation ले Margin बाट Paragraph को Position परिवर्तन गर्छ।"],
+
+["What is Clipboard?","Clipboard temporarily stores cut or copied content.","Clipboard भनेको के हो?","Clipboard ले Cut वा Copy गरिएको Content अस्थायी रूपमा राख्छ।"],
+
+["What is Cut?","Cut removes selected content and places it on Clipboard.","Cut भनेको के हो?","Cut ले Selected Content हटाएर Clipboard मा राख्छ।"],
+
+["What is Copy?","Copy duplicates selected content.","Copy भनेको के हो?","Copy ले Selected Content को प्रतिलिपि बनाउँछ।"],
+
+["What is Paste?","Paste inserts Clipboard content.","Paste भनेको के हो?","Paste ले Clipboard को Content Document मा राख्छ।"],
+
+["What is Undo?","Undo reverses the last action.","Undo भनेको के हो?","Undo ले पछिल्लो Action लाई Reverse गर्छ।"],
+
+["What is Redo?","Redo repeats an undone action.","Redo भनेको के हो?","Redo ले Undo गरिएको Action पुनः लागू गर्छ।"],
+
+["What is Print Preview?","It shows how a document will appear when printed.","Print Preview भनेको के हो?","Print Preview ले Print गर्दा Document कस्तो देखिन्छ भनेर देखाउँछ।"],
+
+["What is Zoom?","Zoom changes document viewing magnification.","Zoom भनेको के हो?","Zoom ले Document को Viewing Size परिवर्तन गर्छ।"],
+
+["What is Ruler?","Ruler is used for margins, indents and tab stops.","Ruler भनेको के हो?","Ruler ले Margins, Indents र Tab Stops मिलाउन मद्दत गर्छ।"],
+
+["What is Status Bar?","Status Bar displays page, word count and other information.","Status Bar भनेको के हो?","Status Bar ले Page, Word Count आदि Information देखाउँछ।"],
+
+["What is Title Bar?","Title Bar displays document and application name.","Title Bar भनेको के हो?","Title Bar ले Document र Application Name देखाउँछ।"],
+
+["What is Quick Access Toolbar?","It provides quick access to frequently used commands.","Quick Access Toolbar भनेको के हो?","यसले बारम्बार प्रयोग हुने Commands मा छिटो पहुँच दिन्छ।"],
+
+["What is Save?","Save stores the current document.","Save भनेको के हो?","Save ले हालको Document सुरक्षित गर्छ।"],
+
+["What is Save As?","Save As saves a document with another name, format or location.","Save As भनेको के हो?","Save As ले Document लाई फरक Name, Format वा Location मा Save गर्छ।"],
+
+["What is Open?","Open loads an existing document.","Open भनेको के हो?","Open ले Existing Document खोल्छ।"],
+
+["What is New?","New creates a new document.","New भनेको के हो?","New ले नयाँ Document तयार गर्छ।"],
+
+["What is Close?","Close closes the current document.","Close भनेको के हो?","Close ले हालको Document बन्द गर्छ।"],
+
+["What is PDF?","PDF preserves the appearance of a document.","PDF भनेको के हो?","PDF ले Document को Appearance कायम राख्ने Format हो।"],
+
+["What is an object?","An object is an inserted element such as picture, shape or chart.","Object भनेको के हो?","Object भनेको Picture, Shape वा Chart जस्ता Insert गरिएका Elements हुन्।"],
+
+["What is a picture?","A picture is an image inserted into a document.","Picture भनेको के हो?","Picture भनेको Document मा Insert गरिएको Image हो।"],
+
+["What is a shape?","Shapes are graphical objects such as circles, arrows and rectangles.","Shape भनेको के हो?","Shape भनेको Circle, Arrow, Rectangle आदि Graphical Objects हुन्।"],
+
+["What is SmartArt Process?","It displays steps in sequence.","SmartArt Process भनेको के हो?","यसले चरणहरूलाई क्रमअनुसार देखाउँछ।"],
+
+["What is SmartArt Cycle?","It displays repeating processes.","SmartArt Cycle भनेको के हो?","यसले दोहोरिने Processes देखाउँछ।"],
+
+["What is SmartArt Hierarchy?","It displays organizational relationships.","SmartArt Hierarchy भनेको के हो?","यसले Organizational Relationships देखाउँछ।"],
+
+["What is SmartArt Matrix?","It displays information in matrix structure.","SmartArt Matrix भनेको के हो?","यसले Information लाई Matrix Structure मा देखाउँछ।"],
+
+["What is SmartArt Pyramid?","It displays levels or hierarchy.","SmartArt Pyramid भनेको के हो?","यसले Levels वा Hierarchy देखाउँछ।"],
+
+["What is Chart Design?","Chart Design provides tools to modify chart layout and style.","Chart Design भनेको के हो?","Chart Design ले Chart को Layout र Style परिवर्तन गर्न Tools दिन्छ।"],
+
+["What is a chart legend?","A legend identifies data series in a chart.","Chart Legend भनेको के हो?","Legend ले Chart का Data Series पहिचान गर्छ।"],
+
+["What is a chart title?","It describes the purpose or content of a chart.","Chart Title भनेको के हो?","Chart Title ले Chart को Purpose वा Content बताउँछ।"],
+
+["What is an axis?","An axis is a reference line used to plot data.","Axis भनेको के हो?","Axis भनेको Data Plot गर्न प्रयोग हुने Reference Line हो।"],
+
+["What is a data series?","A data series is a related group of data points.","Data Series भनेको के हो?","Data Series भनेको सम्बन्धित Data Points को समूह हो।"],
+
+["What is a recipient list?","It contains people or records for Mail Merge.","Recipient List भनेको के हो?","Recipient List मा Mail Merge का लागि आवश्यक Records हुन्छन्।"],
+
+["What is Table of Contents?","It lists document headings with page numbers.","Table of Contents भनेको के हो?","यसले Document का Headings र Page Numbers देखाउँछ।"],
+
+["What is a footnote?","A footnote provides additional information at the bottom of a page.","Footnote भनेको के हो?","Footnote ले Page को तल Additional Information दिन्छ।"],
+
+["What is an endnote?","An endnote provides notes at the end of a document or section.","Endnote भनेको के हो?","Endnote ले Document वा Section को अन्त्यमा Note राख्छ।"],
+
+["What is citation?","Citation identifies the source of information.","Citation भनेको के हो?","Citation ले Information को Source पहिचान गर्छ।"],
+
+["What is bibliography?","Bibliography is a list of sources used in a document.","Bibliography भनेको के हो?","Bibliography भनेको Document मा प्रयोग गरिएका Sources को List हो।"],
+
+["What is AutoCorrect?","AutoCorrect automatically corrects common typing errors.","AutoCorrect भनेको के हो?","AutoCorrect ले सामान्य Typing Errors स्वतः सुधार गर्छ।"],
+
+["What is AutoRecover?","AutoRecover helps recover unsaved work.","AutoRecover भनेको के हो?","AutoRecover ले Unsaved Work Recover गर्न मद्दत गर्छ।"],
+
+["What is a template?","A template is a pre-designed document format.","Template भनेको के हो?","Template भनेको पहिले नै तयार गरिएको Document Format हो।"],
+
+["What is page size?","Page size determines page dimensions.","Page Size भनेको के हो?","Page Size ले Page को आकार निर्धारण गर्छ।"],
+
+["What is Portrait orientation?","Portrait is a vertical page orientation.","Portrait Orientation भनेको के हो?","Portrait भनेको Vertical Page Orientation हो।"],
+
+["What is Landscape orientation?","Landscape is a horizontal page orientation.","Landscape Orientation भनेको के हो?","Landscape भनेको Horizontal Page Orientation हो।"],
+
+["What are columns?","Columns divide page text into vertical sections.","Columns भनेको के हो?","Columns ले Page Text लाई Vertical Sections मा विभाजन गर्छ।"],
+
+["What is paragraph spacing?","It controls space before or after paragraphs.","Paragraph Spacing भनेको के हो?","यसले Paragraph अगाडि वा पछाडिको Space नियन्त्रण गर्छ।"],
+
+["What is a tab stop?","It defines a position where the cursor moves when Tab is pressed.","Tab Stop भनेको के हो?","Tab Stop ले Tab थिच्दा Cursor जाने Position निर्धारण गर्छ।"],
+
+["What is a hanging indent?","It indents all lines except the first line.","Hanging Indent भनेको के हो?","Hanging Indent मा पहिलो Line बाहेकका Lines Indent हुन्छन्।"],
+
+["What is a first-line indent?","It moves only the first line inward.","First-line Indent भनेको के हो?","यसले केवल पहिलो Line लाई भित्रतर्फ सार्छ।"],
+
+["What is a section?","A section is a part of a document with independent formatting.","Section भनेको के हो?","Section भनेको छुट्टै Formatting भएको Document को भाग हो।"],
+
+["What is document protection?","It restricts editing or access to document content.","Document Protection भनेको के हो?","यसले Document को Editing वा Access सीमित गर्छ।"],
+
+["What is editing?","Editing means modifying document content.","Editing भनेको के हो?","Editing भनेको Document Content परिवर्तन गर्ने प्रक्रिया हो।"],
+
+["What is formatting?","Formatting means changing the appearance of content.","Formatting भनेको के हो?","Formatting भनेको Content को Appearance परिवर्तन गर्ने प्रक्रिया हो।"],
+
+["What is text selection?","It identifies content for editing or formatting.","Text Selection भनेको के हो?","यसले Editing वा Formatting का लागि Content छान्छ।"],
+
+["Why is MS Word important?","It helps create professional documents efficiently.","MS Word किन महत्वपूर्ण छ?","यसले Professional Documents सजिलै र प्रभावकारी रूपमा तयार गर्न मद्दत गर्छ।"],
+
+["Which tab contains SmartArt?","SmartArt is available in the Insert tab.","SmartArt कुन Tab मा हुन्छ?","SmartArt Insert Tab मा हुन्छ।"],
+
+["Which tab contains Chart?","Chart is available in the Insert tab.","Chart कुन Tab मा हुन्छ?","Chart Insert Tab मा हुन्छ।"],
+
+["Which tab contains Mail Merge?","Mail Merge is available in the Mailings tab.","Mail Merge कुन Tab मा हुन्छ?","Mail Merge Mailings Tab मा हुन्छ।"],
+
+["Which tab contains Track Changes?","Track Changes is available in the Review tab.","Track Changes कुन Tab मा हुन्छ?","Track Changes Review Tab मा हुन्छ।"],
+
+["Which tab contains Page Orientation?","Page Orientation is available in the Layout tab.","Page Orientation कुन Tab मा हुन्छ?","Page Orientation Layout Tab मा हुन्छ।"],
+
+["Which tab contains Table of Contents?","Table of Contents is available in References.","Table of Contents कुन Tab मा हुन्छ?","Table of Contents References Tab मा हुन्छ।"],
+
+["Which tab contains Zoom?","Zoom controls are available in View.","Zoom कुन Tab मा हुन्छ?","Zoom View Tab मा हुन्छ।"],
+
+["What is the shortcut for Save?","Ctrl + S.","Save को Shortcut के हो?","Save को Shortcut Ctrl + S हो।"],
+
+["What is the shortcut for Print?","Ctrl + P.","Print को Shortcut के हो?","Print को Shortcut Ctrl + P हो।"],
+
+["What is the shortcut for Copy?","Ctrl + C.","Copy को Shortcut के हो?","Copy को Shortcut Ctrl + C हो।"],
+
+["What is the shortcut for Paste?","Ctrl + V.","Paste को Shortcut के हो?","Paste को Shortcut Ctrl + V हो।"],
+
+["What is the shortcut for Cut?","Ctrl + X.","Cut को Shortcut के हो?","Cut को Shortcut Ctrl + X हो।"],
+
+["What is the shortcut for Undo?","Ctrl + Z.","Undo को Shortcut के हो?","Undo को Shortcut Ctrl + Z हो।"],
+
+["What is the shortcut for Redo?","Ctrl + Y.","Redo को Shortcut के हो?","Redo को Shortcut Ctrl + Y हो।"],
+
+["What is the shortcut for Select All?","Ctrl + A.","Select All को Shortcut के हो?","Select All को Shortcut Ctrl + A हो।"],
+
+["What is the shortcut for Find?","Ctrl + F.","Find को Shortcut के हो?","Find को Shortcut Ctrl + F हो।"],
+
+["What is the shortcut for Replace?","Ctrl + H.","Replace को Shortcut के हो?","Replace को Shortcut Ctrl + H हो।"],
+
+["What is the shortcut for Bold?","Ctrl + B.","Bold को Shortcut के हो?","Bold को Shortcut Ctrl + B हो।"],
+
+["What is the shortcut for Italic?","Ctrl + I.","Italic को Shortcut के हो?","Italic को Shortcut Ctrl + I हो।"],
+
+["What is the shortcut for Underline?","Ctrl + U.","Underline को Shortcut के हो?","Underline को Shortcut Ctrl + U हो।"],
+
+["What is the shortcut for Center Align?","Ctrl + E.","Center Align को Shortcut के हो?","Center Align को Shortcut Ctrl + E हो।"],
+
+["What is the shortcut for Left Align?","Ctrl + L.","Left Align को Shortcut के हो?","Left Align को Shortcut Ctrl + L हो।"],
+
+["What is the shortcut for Right Align?","Ctrl + R.","Right Align को Shortcut के हो?","Right Align को Shortcut Ctrl + R हो।"],
+
+["What is the shortcut for Justify?","Ctrl + J.","Justify को Shortcut के हो?","Justify को Shortcut Ctrl + J हो।"],
+
+["What is the shortcut for page break?","Ctrl + Enter.","Page Break को Shortcut के हो?","Page Break को Shortcut Ctrl + Enter हो।"],
+
+["What is the shortcut for hyperlink?","Ctrl + K.","Hyperlink को Shortcut के हो?","Hyperlink को Shortcut Ctrl + K हो।"],
+
+["What is the shortcut for spelling and grammar?","F7.","Spelling and Grammar को Shortcut के हो?","Spelling and Grammar को Shortcut F7 हो।"],
+
+["What is the shortcut for Help?","F1.","Help को Shortcut के हो?","Help को Shortcut F1 हो।"],
+
+["What is the shortcut for Change Case?","Shift + F3.","Change Case को Shortcut के हो?","Change Case को Shortcut Shift + F3 हो।"],
+
+["What is the shortcut for Subscript?","Ctrl + =.","Subscript को Shortcut के हो?","Subscript को Shortcut Ctrl + = हो।"],
+
+["What is the shortcut for Superscript?","Ctrl + Shift + =.","Superscript को Shortcut के हो?","Superscript को Shortcut Ctrl + Shift + = हो।"],
+
+["What is the shortcut for single spacing?","Ctrl + 1.","Single Spacing को Shortcut के हो?","Single Spacing को Shortcut Ctrl + 1 हो।"],
+
+["What is the shortcut for double spacing?","Ctrl + 2.","Double Spacing को Shortcut के हो?","Double Spacing को Shortcut Ctrl + 2 हो।"],
+
+["What is the shortcut for 1.5 spacing?","Ctrl + 5.","1.5 Spacing को Shortcut के हो?","1.5 Spacing को Shortcut Ctrl + 5 हो।"]
+
+];
+
+/* ==========================
+RENDER VIVA
+========================== */
+
+function renderViva(){
+
+let box=document.getElementById("qaContainer");
+
+box.innerHTML="";
+
+qaData.forEach((q,i)=>{
+
+let item=document.createElement("div");
+
+item.className="qa-item";
+
+item.innerHTML=`
+
+<div class="lang-en">
+
+<h3>Q${i+1}. ${q[0]}</h3>
+
+<div class="answer">
+<b>Answer:</b> ${q[1]}
+</div>
+
+</div>
+
+<div class="lang-np">
+
+<h3>प्रश्न ${i+1}. ${q[2]}</h3>
+
+<div class="answer">
+<b>उत्तर:</b> ${q[3]}
+</div>
+
+</div>
+
+`;
+
+box.appendChild(item);
+
+});
+
+}
+
+/* ==========================
+MCQ DATA – 50
+========================== */
+
+const mcqs=[
+
+{
+en:"Which software is used for word processing?",
+np:"Word Processing का लागि कुन Software प्रयोग गरिन्छ?",
+options:["MS Excel","MS Word","MS Paint","Calculator"],
+npOptions:["MS Excel","MS Word","MS Paint","Calculator"],
+answer:1
+},
+
+{
+en:"What is the default extension of a modern Word document?",
+np:"Modern Word Document को Default Extension कुन हो?",
+options:[".xls",".pptx",".docx",".jpg"],
+npOptions:[".xls",".pptx",".docx",".jpg"],
+answer:2
+},
+
+{
+en:"Which shortcut is used to save a document?",
+np:"Document Save गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + P","Ctrl + S","Ctrl + C","Ctrl + X"],
+npOptions:["Ctrl + P","Ctrl + S","Ctrl + C","Ctrl + X"],
+answer:1
+},
+
+{
+en:"Which shortcut is used to print?",
+np:"Print गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + P","Ctrl + S","Ctrl + A","Ctrl + F"],
+npOptions:["Ctrl + P","Ctrl + S","Ctrl + A","Ctrl + F"],
+answer:0
+},
+
+{
+en:"Which shortcut is used to copy?",
+np:"Copy गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + X","Ctrl + V","Ctrl + C","Ctrl + Z"],
+npOptions:["Ctrl + X","Ctrl + V","Ctrl + C","Ctrl + Z"],
+answer:2
+},
+
+{
+en:"Which shortcut is used to paste?",
+np:"Paste गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + V","Ctrl + C","Ctrl + X","Ctrl + P"],
+npOptions:["Ctrl + V","Ctrl + C","Ctrl + X","Ctrl + P"],
+answer:0
+},
+
+{
+en:"Which shortcut is used to cut?",
+np:"Cut गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + A","Ctrl + X","Ctrl + B","Ctrl + K"],
+npOptions:["Ctrl + A","Ctrl + X","Ctrl + B","Ctrl + K"],
+answer:1
+},
+
+{
+en:"Which shortcut selects all content?",
+np:"सबै Content Select गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + S","Ctrl + A","Ctrl + E","Ctrl + L"],
+npOptions:["Ctrl + S","Ctrl + A","Ctrl + E","Ctrl + L"],
+answer:1
+},
+
+{
+en:"Which shortcut is used for Bold?",
+np:"Bold गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + B","Ctrl + I","Ctrl + U","Ctrl + D"],
+npOptions:["Ctrl + B","Ctrl + I","Ctrl + U","Ctrl + D"],
+answer:0
+},
+
+{
+en:"Which shortcut is used for Italic?",
+np:"Italic गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + B","Ctrl + U","Ctrl + I","Ctrl + R"],
+npOptions:["Ctrl + B","Ctrl + U","Ctrl + I","Ctrl + R"],
+answer:2
+},
+
+{
+en:"Which shortcut is used for Underline?",
+np:"Underline गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + U","Ctrl + I","Ctrl + B","Ctrl + E"],
+npOptions:["Ctrl + U","Ctrl + I","Ctrl + B","Ctrl + E"],
+answer:0
+},
+
+{
+en:"Which tab contains SmartArt?",
+np:"SmartArt कुन Tab मा हुन्छ?",
+options:["Home","Insert","Review","View"],
+npOptions:["Home","Insert","Review","View"],
+answer:1
+},
+
+{
+en:"Which tab contains Charts?",
+np:"Chart कुन Tab मा हुन्छ?",
+options:["Insert","Home","Design","Review"],
+npOptions:["Insert","Home","Design","Review"],
+answer:0
+},
+
+{
+en:"Which tab contains Mail Merge?",
+np:"Mail Merge कुन Tab मा हुन्छ?",
+options:["Review","Mailings","View","Layout"],
+npOptions:["Review","Mailings","View","Layout"],
+answer:1
+},
+
+{
+en:"Which tab contains Track Changes?",
+np:"Track Changes कुन Tab मा हुन्छ?",
+options:["Review","Insert","Home","View"],
+npOptions:["Review","Insert","Home","View"],
+answer:0
+},
+
+{
+en:"Which tab contains Page Orientation?",
+np:"Page Orientation कुन Tab मा हुन्छ?",
+options:["Home","Layout","Review","Mailings"],
+npOptions:["Home","Layout","Review","Mailings"],
+answer:1
+},
+
+{
+en:"Which tab contains Table of Contents?",
+np:"Table of Contents कुन Tab मा हुन्छ?",
+options:["References","Home","Insert","View"],
+npOptions:["References","Home","Insert","View"],
+answer:0
+},
+
+{
+en:"Which shortcut opens Find?",
+np:"Find खोल्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + F","Ctrl + H","Ctrl + G","Ctrl + K"],
+npOptions:["Ctrl + F","Ctrl + H","Ctrl + G","Ctrl + K"],
+answer:0
+},
+
+{
+en:"Which shortcut opens Replace?",
+np:"Replace खोल्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + R","Ctrl + H","Ctrl + F","Ctrl + P"],
+npOptions:["Ctrl + R","Ctrl + H","Ctrl + F","Ctrl + P"],
+answer:1
+},
+
+{
+en:"Which shortcut is used for Undo?",
+np:"Undo गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + Y","Ctrl + Z","Ctrl + U","Ctrl + X"],
+npOptions:["Ctrl + Y","Ctrl + Z","Ctrl + U","Ctrl + X"],
+answer:1
+},
+
+{
+en:"Which shortcut is used for Redo?",
+np:"Redo गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + Z","Ctrl + Y","Ctrl + R","Ctrl + D"],
+npOptions:["Ctrl + Z","Ctrl + Y","Ctrl + R","Ctrl + D"],
+answer:1
+},
+
+{
+en:"Which shortcut creates a hyperlink?",
+np:"Hyperlink बनाउन कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + H","Ctrl + K","Ctrl + L","Ctrl + M"],
+npOptions:["Ctrl + H","Ctrl + K","Ctrl + L","Ctrl + M"],
+answer:1
+},
+
+{
+en:"Which shortcut creates a page break?",
+np:"Page Break बनाउन कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + Enter","Ctrl + P","Ctrl + Shift","Alt + Enter"],
+npOptions:["Ctrl + Enter","Ctrl + P","Ctrl + Shift","Alt + Enter"],
+answer:0
+},
+
+{
+en:"Which alignment places text in the center?",
+np:"Text लाई बीचमा राख्ने Alignment कुन हो?",
+options:["Left","Right","Center","Justify"],
+npOptions:["Left","Right","Center","Justify"],
+answer:2
+},
+
+{
+en:"Which alignment aligns text to both margins?",
+np:"Text लाई दुवै Margin मा मिलाउने Alignment कुन हो?",
+options:["Left","Right","Center","Justify"],
+npOptions:["Left","Right","Center","Justify"],
+answer:3
+},
+
+{
+en:"Which tool checks spelling?",
+np:"Spelling Check गर्न कुन Tool प्रयोग गरिन्छ?",
+options:["F7","F5","F1","F12"],
+npOptions:["F7","F5","F1","F12"],
+answer:0
+},
+
+{
+en:"Which key opens Help?",
+np:"Help खोल्न कुन Key प्रयोग गरिन्छ?",
+options:["F1","F2","F5","F7"],
+npOptions:["F1","F2","F5","F7"],
+answer:0
+},
+
+{
+en:"Which chart shows parts of a whole?",
+np:"कुल Data को भाग देखाउन कुन Chart प्रयोग हुन्छ?",
+options:["Line","Pie","Scatter","Column"],
+npOptions:["Line","Pie","Scatter","Column"],
+answer:1
+},
+
+{
+en:"Which chart shows trends over time?",
+np:"समयसँगैको Trend देखाउन कुन Chart प्रयोग हुन्छ?",
+options:["Pie","Line","Doughnut","Radar"],
+npOptions:["Pie","Line","Doughnut","Radar"],
+answer:1
+},
+
+{
+en:"Which chart uses vertical columns?",
+np:"Vertical Columns प्रयोग गर्ने Chart कुन हो?",
+options:["Bar","Column","Pie","Line"],
+npOptions:["Bar","Column","Pie","Line"],
+answer:1
+},
+
+{
+en:"Which chart uses horizontal bars?",
+np:"Horizontal Bars प्रयोग गर्ने Chart कुन हो?",
+options:["Column","Bar","Pie","Area"],
+npOptions:["Column","Bar","Pie","Area"],
+answer:1
+},
+
+{
+en:"Which SmartArt is useful for organizational structure?",
+np:"Organizational Structure का लागि कुन SmartArt उपयोगी हुन्छ?",
+options:["Cycle","Hierarchy","Picture","Matrix"],
+npOptions:["Cycle","Hierarchy","Picture","Matrix"],
+answer:1
+},
+
+{
+en:"Which SmartArt shows repeating processes?",
+np:"दोहोरिने Process देखाउन कुन SmartArt प्रयोग हुन्छ?",
+options:["Cycle","Hierarchy","List","Pyramid"],
+npOptions:["Cycle","Hierarchy","List","Pyramid"],
+answer:0
+},
+
+{
+en:"Which SmartArt shows step-by-step information?",
+np:"Step-by-step Information देखाउन कुन SmartArt प्रयोग हुन्छ?",
+options:["Process","Matrix","Picture","Relationship"],
+npOptions:["Process","Matrix","Picture","Relationship"],
+answer:0
+},
+
+{
+en:"Which SmartArt shows information as a list?",
+np:"Information लाई List को रूपमा देखाउन कुन SmartArt प्रयोग हुन्छ?",
+options:["List","Cycle","Pyramid","Hierarchy"],
+npOptions:["List","Cycle","Pyramid","Hierarchy"],
+answer:0
+},
+
+{
+en:"What does Ctrl + 1 do?",
+np:"Ctrl + 1 ले के गर्छ?",
+options:["Double spacing","Single spacing","Print","Save"],
+npOptions:["Double spacing","Single spacing","Print","Save"],
+answer:1
+},
+
+{
+en:"What does Ctrl + 2 do?",
+np:"Ctrl + 2 ले के गर्छ?",
+options:["Single spacing","Double spacing","Bold","Print"],
+npOptions:["Single spacing","Double spacing","Bold","Print"],
+answer:1
+},
+
+{
+en:"What does Ctrl + 5 do?",
+np:"Ctrl + 5 ले के गर्छ?",
+options:["1.5 spacing","Single spacing","Double spacing","Save"],
+npOptions:["1.5 spacing","Single spacing","Double spacing","Save"],
+answer:0
+},
+
+{
+en:"Which shortcut applies Subscript?",
+np:"Subscript गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + =","Ctrl + Shift + =","Ctrl + B","Ctrl + U"],
+npOptions:["Ctrl + =","Ctrl + Shift + =","Ctrl + B","Ctrl + U"],
+answer:0
+},
+
+{
+en:"Which shortcut applies Superscript?",
+np:"Superscript गर्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["Ctrl + =","Ctrl + Shift + =","Ctrl + P","Ctrl + S"],
+npOptions:["Ctrl + =","Ctrl + Shift + =","Ctrl + P","Ctrl + S"],
+answer:1
+},
+
+{
+en:"What is the main use of WordArt?",
+np:"WordArt को मुख्य प्रयोग के हो?",
+options:["Tables","Decorative text","Printing","Spell checking"],
+npOptions:["Tables","Decorative text","Printing","Spell checking"],
+answer:1
+},
+
+{
+en:"What is the main use of Mail Merge?",
+np:"Mail Merge को मुख्य प्रयोग के हो?",
+options:["Drawing","Multiple personalized documents","Charts","Page color"],
+npOptions:["Drawing","Multiple personalized documents","Charts","Page color"],
+answer:1
+},
+
+{
+en:"Where is Watermark generally found in current Word versions?",
+np:"हालका Word Version मा Watermark सामान्यतया कहाँ पाइन्छ?",
+options:["Design","Home","Review","Mailings"],
+npOptions:["Design","Home","Review","Mailings"],
+answer:0
+},
+
+{
+en:"What is a Header?",
+np:"Header भनेको के हो?",
+options:["Bottom information","Top information","Table","Chart"],
+npOptions:["Bottom information","Top information","Table","Chart"],
+answer:1
+},
+
+{
+en:"What is a Footer?",
+np:"Footer भनेको के हो?",
+options:["Top information","Bottom information","Picture","Shape"],
+npOptions:["Top information","Bottom information","Picture","Shape"],
+answer:1
+},
+
+{
+en:"Which feature creates a list of headings with page numbers?",
+np:"Headings र Page Numbers को List बनाउन कुन Feature प्रयोग हुन्छ?",
+options:["WordArt","Table of Contents","Mail Merge","Watermark"],
+npOptions:["WordArt","Table of Contents","Mail Merge","Watermark"],
+answer:1
+},
+
+{
+en:"Which tool is used to add notes to document content?",
+np:"Document Content मा Note थप्न कुन Tool प्रयोग हुन्छ?",
+options:["Comment","Chart","Table","WordArt"],
+npOptions:["Comment","Chart","Table","WordArt"],
+answer:0
+},
+
+{
+en:"Which view displays a document as it will print?",
+np:"Document लाई Print हुने जस्तै देखाउने View कुन हो?",
+options:["Web Layout","Print Layout","Read Mode","Outline"],
+npOptions:["Web Layout","Print Layout","Read Mode","Outline"],
+answer:1
+},
+
+{
+en:"Which feature automatically corrects common typing errors?",
+np:"सामान्य Typing Errors स्वतः सुधार गर्ने Feature कुन हो?",
+options:["AutoCorrect","Mail Merge","WordArt","SmartArt"],
+npOptions:["AutoCorrect","Mail Merge","WordArt","SmartArt"],
+answer:0
+},
+
+{
+en:"Which shortcut opens Save As in Word?",
+np:"Word मा Save As खोल्न कुन Shortcut प्रयोग गरिन्छ?",
+options:["F12","F1","F7","Ctrl + P"],
+npOptions:["F12","F1","F7","Ctrl + P"],
+answer:0
+},
+
+{
+en:"Which feature records document changes?",
+np:"Document मा भएका Changes Record गर्ने Feature कुन हो?",
+options:["Track Changes","WordArt","Zoom","Watermark"],
+npOptions:["Track Changes","WordArt","Zoom","Watermark"],
+answer:0
+}
+
+];
+
+/* ==========================
+MCQ LANGUAGE
+========================== */
+
+let mcqLanguage="en";
+
+function changeMCQLanguage(lang){
+
+mcqLanguage=lang;
+
+document.getElementById("enMCQ")
+.classList.toggle("active",lang==="en");
+
+document.getElementById("npMCQ")
+.classList.toggle("active",lang==="np");
+
+renderMCQ();
+
+}
+
+/* ==========================
+MCQ STATE
+========================== */
+
+let score=0;
+let attempted=0;
+let answered=[];
+
+/* ==========================
+RENDER MCQ
+========================== */
+
+function renderMCQ(){
+
+let container=
+document.getElementById("mcqContainer");
+
+container.innerHTML="";
+
+mcqs.forEach((q,index)=>{
+
+let box=document.createElement("div");
+
+box.className="mcq";
+
+let question=
+mcqLanguage==="en" ? q.en : q.np;
+
+let options=
+mcqLanguage==="en" ? q.options : q.npOptions;
+
+box.innerHTML=`
+
+<h3>
+${index+1}. ${question}
+</h3>
+
+<div id="options-${index}"></div>
+
+<div id="result-${index}"></div>
+
+`;
+
+container.appendChild(box);
+
+let optionsBox=
+document.getElementById(`options-${index}`);
+
+options.forEach((option,optIndex)=>{
+
+let button=document.createElement("button");
+
+button.className="option";
+
+button.textContent=
+String.fromCharCode(65+optIndex)+". "+option;
+
+button.onclick=function(){
+
+checkAnswer(index,optIndex,button);
+
+};
+
+optionsBox.appendChild(button);
+
+});
+
+});
+
+}
+
+/* ==========================
+CHECK ANSWER
+========================== */
+
+function checkAnswer(qIndex,selected,clickedButton){
+
+if(answered[qIndex]) return;
+
+answered[qIndex]=true;
+attempted++;
+
+let result=
+document.getElementById(`result-${qIndex}`);
+
+let buttons=
+document.querySelectorAll(
+`#options-${qIndex} .option`
+);
+
+if(selected===mcqs[qIndex].answer){
+
+score++;
+
+clickedButton.classList.add("correct");
+
+result.className="result correct";
+
+result.innerHTML=
+"✅ Correct Answer!";
+
+}else{
+
+clickedButton.classList.add("wrong");
+
+result.className="result wrong";
+
+let correctIndex=
+mcqs[qIndex].answer;
+
+buttons[correctIndex]
+.classList.add("correct");
+
+let correctText=
+mcqLanguage==="en"
+?mcqs[qIndex].options[correctIndex]
+:mcqs[qIndex].npOptions[correctIndex];
+
+result.innerHTML=
+"❌ Wrong Answer!<br>Correct Answer: <b>"
++correctText+
+"</b>";
+
+}
+
+document.getElementById("score").textContent=score;
+
+document.getElementById("attempted").textContent=attempted;
+
+}
+
+/* ==========================
+RESET QUIZ
+========================== */
+
+function resetQuiz(){
+
+score=0;
+attempted=0;
+answered=[];
+
+document.getElementById("score").textContent=0;
+document.getElementById("attempted").textContent=0;
+
+renderMCQ();
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+/* ==========================
+LOAD
+========================== */
+
+document.addEventListener("DOMContentLoaded",function(){
+
+renderViva();
+renderMCQ();
+
+let dark=
+localStorage.getItem("mswordDark");
+
+if(dark==="true")
+document.body.classList.add("dark");
+
+let language=
+localStorage.getItem("mswordLanguage") || "en";
+
+changeLanguage(language);
+
+});
+
+</script>
+
+</body>
+</html>
